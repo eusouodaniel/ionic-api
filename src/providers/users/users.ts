@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
  
 @Injectable()
 export class UsersProvider {
-  private API_URL = 'http://localhost:8000/api/'
+  private API_URL = 'https://api.danielsilva.io/api/'
  
   constructor(public http: Http) { }
  
