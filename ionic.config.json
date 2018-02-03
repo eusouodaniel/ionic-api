@@ -1,0 +1,8 @@
+{
+  "name": "consumir_api_ionic",
+  "app_id": "ea5854e7",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
