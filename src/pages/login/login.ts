@@ -12,19 +12,16 @@ export class LoginPage {
  
   constructor(public navCtrl: NavController, public navParams: NavParams, private toast: ToastController, private userProvider: UsersProvider) {
     this.model = new User();
-    this.model.email = 'sydney@fife';
-    this.model.password = 'pistol';
+    this.model.email = 'danielrodriguesdrs331@gmail.com';
+    this.model.password = '123';
   }
  
   login() {
     this.userProvider.login(this.model.email, this.model.password)
       .then((result: any) => {
+        //teste de toast
         this.toast.create({ message: 'Usuário logado com sucesso. Token: ' + result.token, position: 'botton', duration: 3000 }).present();
- 
-        //Salvar o token no Ionic Storage para usar em futuras requisições.
-        //Redirecionar o usuario para outra tela usando o navCtrl
-        //this.navCtrl.pop();
-        //this.navCtrl.setRoot()
+
       })
       .catch((error: any) => {
         this.toast.create({ message: 'Erro ao efetuar login. Erro: ' + error.error, position: 'botton', duration: 3000 }).present();

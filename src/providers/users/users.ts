@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
  
 @Injectable()
 export class UsersProvider {
-  private API_URL = 'https://api.danielsilva.io/api/'
+  private API_URL = 'https://api.danielsilva.io/api/';
  
   constructor(public http: Http) { }
  
@@ -42,10 +42,10 @@ export class UsersProvider {
     });
   }
  
-  getAll(page: number) {
+  getAll() {
     return new Promise((resolve, reject) => {
  
-      let url = this.API_URL + 'users/?per_page=10&page=' + page;
+      let url = this.API_URL + 'users/?per_page=10';
  
       this.http.get(url)
         .subscribe((result: any) => {
